@@ -7,6 +7,8 @@ This is the documentation for the CookieStand API, which provides endpoints for 
 
 The CookieStand API is a web service for managing information about cookie stands. It allows you to create, retrieve, update, and delete cookie stands. Additionally, it provides information about hourly sales for each cookie stand.
 
+![erd](erd.png)
+
 ## API Endpoints
 
 ### Create a Cookie Stand
