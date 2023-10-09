@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "apis1": {
+      "apiEndpoint": "https://cookie-stand-api.azure-api.net/",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/cookie-stand-api/apis/cookie-stand-api",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/cookie-stand-api20231009101259/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDefaultConnection_63517464D3",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/cookie-stand-dbserver/databases/cookie-stand-api_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DefaultConnection"
+    }
+  }
+}
