@@ -3,6 +3,7 @@ using cookie_stand_api.data;
 using cookie_stand_api.model.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Data;
 using System.Text.Json.Serialization;
 namespace cookie_stand_api
 {
@@ -10,6 +11,9 @@ namespace cookie_stand_api
     {
         public static void Main(string[] args)
         {
+           
+
+         
             var builder = WebApplication.CreateBuilder(args);
                builder.Services.AddControllers().AddNewtonsoftJson(options =>
        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
@@ -22,8 +26,15 @@ namespace cookie_stand_api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            
-                     var app = builder.Build();
+            //builder.Services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowLocalhost3000",
+            //        builder => builder.WithOrigins("http://localhost:3000") // Replace with your Next.js app's URL
+            //                         .AllowAnyHeader()
+            //                         .AllowAnyMethod());
+            //});
+
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -31,9 +42,9 @@ namespace cookie_stand_api
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            //app.UseCors("AllowLocalhost3000");
             app.UseHttpsRedirection();
-
+            
             app.UseAuthorization();
 
 

@@ -28,7 +28,7 @@ namespace cookie_stand_api.model.Services
                 var hourlySales = new List<oneHourSales>();
                 var random = new Random();
 
-                for (var hour = 0; hour < 12; hour++)
+                for (var hour = 0; hour < 14; hour++)
                 {
                     var one = new oneHourSales();
                     var customers = random.Next(stand.MinimumCustomersPerHour, stand.MaximumCustomersPerHour + 1);

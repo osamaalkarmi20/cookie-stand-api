@@ -2,6 +2,7 @@ using cookie_stand_api.data;
 using cookie_stand_api.model;
 using cookie_stand_api.model.DTO;
 using cookie_stand_api.model.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace cookie_stand_api.Controllers
 
     [Route("[controller]")]
     [ApiController]
+    [EnableCors("AllowLocalhost3000")]
     public class CookieStandController : ControllerBase
     {
         private readonly CookieStandDbContext _dbContext;
